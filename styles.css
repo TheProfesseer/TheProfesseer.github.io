@@ -1,0 +1,138 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #111;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #001F3F;
+    color: #FFF;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+  
+  /* Mission Section */
+  .mission {
+    background-color: #F8F9FA;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .mission h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 40px 20px;
+  }
+  
+  .features .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature ul {
+    list-style: none;
+  }
+  
+  .feature ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  /* Data Coverage */
+  .data-coverage {
+    background-color: #F8F9FA;
+    padding: 40px 20px;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .stat {
+    background-color: #E9ECEF;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Data Info */
+  .data-info {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .data-info h2 {
+    margin-bottom: 20px;
+  }
+  
+  .data-info p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* CTA */
+  .cta-container {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .cta {
+    background-color: #001F3F;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cta:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #001F3F;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
