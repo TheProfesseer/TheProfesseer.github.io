@@ -30,6 +30,15 @@
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
+:root {
+    --primary-color: #0043b0;
+    --secondary-color: #9c0043;
+    --text-color: #333;
+    --background-color: #F8F9FA;
+    --footer-background-color: #0043b0;
+    --footer-text-color: #FFF;
+}
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2342,7 +2351,7 @@ blockquote {
     content: "\2022"; /* Unicode for bullet */
     position: absolute;
     left: 0;
-    color: #d2b356; /* Custom bullet color */
+    color: var(--secondary-color); /* Custom bullet color */
     font-size: 1.5em; /* Custom bullet size */
     line-height: 1em; /* Align bullet with text */
 }

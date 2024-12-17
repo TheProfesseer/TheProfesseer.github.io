@@ -175,32 +175,3 @@
         order: 2;
     }
 }
-
-/* CSS */
-#about .feature-row {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-#about .feature-text {
-    flex: 1;
-}
-
-#about .feature-image {
-    flex: 1;
-}
-
-#about .feature-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-    #about .feature-row {
-        flex-direction: column;
-        text-align: center;
-    }
-}

@@ -13,6 +13,15 @@
 /* 1. Website Default Styling */
 /*------------------------------------------------------------------------------------------*/
 
+:root {
+    --primary-color: #0043b0;
+    --secondary-color: #9c0043;
+    --text-color: #333;
+    --background-color: #F8F9FA;
+    --footer-background-color: #0043b0;
+    --footer-text-color: #FFF;
+}
+
 
 body {
     background:#fff;
@@ -22,27 +31,27 @@ body {
 /* Default Link Color */
 
 a, .la-ball-triangle-path {
-    color:#d2b356;
+    color: var(--primary-color);
 }
 
 a:hover, #header.nav-solid nav a:hover {
-    color:#d2b356;
+    color: var(--primary-color);
 }
 
 /* Default Icon Color */
 
 .icon i {
-    color:#d2b356;
+    color:var(--primary-color);
 }
 
 /* Border Color */
 
 #banner .section-heading:before, .testimonial.classic footer:before {
-    background: #d2b356;
+    background: var(--primary-color);
 }
 
 .pricing-block-content:hover {
-    border-color:#d2b356;
+    border-color:var(--primary-color);
 }
 
 
@@ -68,8 +77,8 @@ a:hover, #header.nav-solid nav a:hover {
 /* Navigation Active State */
 
 #header.nav-solid .active {
-    color: #d2b356;
-    border-color: #d2b356;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }    
 
 
@@ -82,7 +91,7 @@ a:hover, #header.nav-solid nav a:hover {
 /* Primary Background and Text Colors */
 
 .primary-color, .featured .pricing {
-    background-color:#d2b356;
+    background-color:var(--primary-color);
 }
 
 .primary-color, .primary-color .section-title, .primary-color .section-subtitle, .featured .pricing, .featured .pricing p {
@@ -90,7 +99,7 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 .section-heading h2:after {
-    background:#d2b356;
+    background:var(--primary-color);
     content:"";
     display:block;
     width:30px;
@@ -285,8 +294,8 @@ h6 {
 /* Button Hover Color */
 
 .button:hover,  input[type="submit"]:hover {
-    border-color:#d2b356;
-    color:#d2b356;
+    border-color:var(--primary-color);
+    color:var(--primary-color);
 }
 
 
@@ -312,8 +321,8 @@ h6 {
 /* Button Hover Color */
 
 #banner .button:hover {
-    color:#d2b356;
-    border-color:#d2b356;
+    color:var(--primary-color);
+    border-color:var(--primary-color);
 }
 
 
@@ -333,3 +342,34 @@ h6 {
 #landing-footer i {
     color:#999;
 }
+
+/* CSS */
+.feature-row {
+    display: flex !important; /* Force flex display */
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .feature-text {
+    flex: 1;
+    order: 1; /* Ensure text stays on left */
+  }
+  
+  .feature-image {
+    flex: 1;
+    order: 2; /* Ensure image stays on right */
+  }
+  
+  #about .feature-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+      #about .feature-row {
+          flex-direction: column;
+          text-align: center;
+      }
+  }
