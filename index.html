@@ -1,376 +1,373 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
+<html lang="en">
 
-    <!--Page Title-->
-    <title>The Professeer</title>
-
-    <!--Meta Keywords and Description-->
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
-
-    <!-- Main CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Namari Color CSS -->
-    <link rel="stylesheet" href="css/namari-color.css">
-
-    <!--Icon Fonts - Font Awesome Icons-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- Animate CSS-->
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
-
-    <!--Google Webfonts-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Professeer</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Font Imports Here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <!--
+        IMPORTANT: You MUST link or import the 'Aspekta' font for headings to look correct.
+        The @font-face rule below is a placeholder.
+    -->
+    <style>
+        @font-face {
+            font-family: 'Aspekta';
+            src: url(fonts/Aspekta-400.woff2) format('woff2');
+            font-weight: 100 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Aspekta';
+            src: url(fonts/Aspekta-500.woff2) format('woff2');
+            font-weight: 500;
+            font-style: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Preloader -->
-<div id="preloader">
-    <div id="status" class="la-ball-triangle-path">
-        <div></div>
-        <div></div>
-        <div></div>
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">The Professeer</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">USAGE</a></li>
+          <li><a href="#">TEAM</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="button button-primary">Get Started</a>
     </div>
-</div>
-<!--End of Preloader-->
+  </header>
 
-<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
-    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
-    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
-    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
-    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
-</div>
-
-<div id="wrapper">
-
-    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
-        <div id="header" class="nav-collapse">
-            <div class="row clearfix">
-                <div class="col-1">
-
-                    <!--Logo-->
-                    <div id="logo">
-
-                        <!--Logo that is shown on the banner-->
-                        <h1> THE PROFESSEER </h1>
-                        <!-- <img src="images/logo.png" id="banner-logo" alt="Landing Page"/> -->
-                        <!--End of Banner Logo-->
-
-                        <!--The Logo that is shown on the sticky Navigation Bar-->
-                        <!--End of Navigation Logo-->
-
-                    </div>
-                    <!--End of Logo-->
-
-                    <aside>
-
-                    
-                        <!--End of Social Icons in Header-->
-
-                    </aside>
-
-                    <!--Main Navigation-->
-                    <nav id="nav-main">
-                        <ul>
-                            <li>
-                                <a href="#banner">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about">About</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">How to use</a>
-                            </li>
-                            <li>
-                                <a href="#testimonials">Team</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-                    <!--End of Main Navigation-->
-
-                    <div id="nav-trigger"><span></span></div>
-                    <nav id="nav-mobile"></nav>
-
-                </div>
-            </div>
-        </div><!--End of Header-->
-
-        <!--Banner Content-->
-        <div id="banner-content" class="row clearfix">
-
-            <div class="col-38">
-
-                <div class="section-heading">
-                    <h1>  
-                        Power up your litigation strategy
-</h1>
-<br> <br> 
-<blockquote class="testimonial text-right bigtest">
-    <q>Empowering litigants with analytics that matter to their case.</q>
-    <footer> Our mission</footer>
-</blockquote>
-
-<a href="http://lsd.xkdr.org:8501/" class="dashboard-button">Open Dashboard</a>
-
-                </div>
-
-                <!--Call to Action-->
-                <!-- <a href="#" class="button">START CREATING TODAY</a> -->
-                <!--End Call to Action-->
-
-            </div>
-
-        </div><!--End of Row-->
-    </header>
-
-    <!--Main Content Area-->
-    <main id="content">
-
-        <section id="about" class="introduction scrollto">
-            <div class="row clearfix">
-                <!-- Know Your Judge -->
-                <div class="feature-row">
-                    <div class="feature-text">
-                        <div class="section-heading">
-                            <h2 class="section-title">Know your judge</h2>
-                            <ul class="styled-list">
-                                <li>When will your case get disposed?</li>
-                                <li>When will you get your first hearing?</li>
-                                <li>What are the chances of interim relief?</li>
-                                <li>Will the judge change?</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <a href="images/screenshots/knowYourJudge.png" data-featherlight="image">
-                            <img src="images/screenshots/knowYourJudge.png" alt="Judge Analytics">
-                        </a>
-                    </div>
-                </div>
-        
-                <!-- Know Your Costs -->
-                <div class="feature-row">
-                    <div class="feature-text">
-                        <div class="section-heading">
-                            <h2 class="section-title">Know your costs</h2>
-                            <ul class="styled-list">
-                                <li>How many hearings does it take?</li>
-                                <li>How many of these will be adjournments?</li>
-                                <li>When will my case make progress?</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <a href="images/screenshots/knowYourCost.png" data-featherlight="image">
-                            <img src="images/screenshots/knowYourCost.png" alt="Cost Analytics">
-                        </a>
-                    </div>
-                </div>
-        
-                <!-- Know Your Lawyer -->
-                <div class="feature-row">
-                    <div class="feature-text">
-                        <div class="section-heading">
-                            <h2 class="section-title">Know your lawyer</h2>
-                            <ul class="styled-list">
-                                <li>What's your lawyer's history before a judge?</li>
-                                <li>How often did they win?</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <a href="images/screenshots/knowYourLawyer.png" data-featherlight="image">
-                            <img src="images/screenshots/knowYourLawyer.png" alt="Lawyer Analytics">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--Content Section-->
-        <div id="services" class="scrollto clearfix">
-
-
-            <div class="row no-padding-bottom clearfix">
-
-
-                <!--Content Left Side-->
-                <div class="col-3">
-                    <!--User Testimonial-->
-                    <blockquote class="testimonial text-right bigtest">
-                        <q>Empowering litigants with analytics that matter to their case.</q>
-                        <footer> Our mission</footer>
-                    </blockquote>
-                    <!-- End of Testimonial-->
-
-                </div>
-                <!--End Content Left Side-->
-
-            </div>
-
-
+  <main>
+    <!-- Hero Section - Remains on Beige Background -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- FIXED: Ensure spans have underline class -->
+          <h1>Empowering litigants with <span class="underline">analytics that matter</span> to their case.</h1>
+          <p class="subtext">Data-driven insights to strengthen cases, predict outcomes, and make smarter decisions.<br>Transform your legal strategy today.</p>
+          <div class="hero-buttons">
+            <a href="#" class="button button-primary">Open Dashboard</a>
+            <a href="#" class="button button-secondary">Schedule a Call</a>
+          </div>
         </div>
+        <div class="hero-image">
+          <img src="images/banner-images/owl2.png" alt="Owl Professor Illustration">
+        </div>
+      </div>
+    </section> <!-- End Hero Section -->
 
-        
-                
-            
-            </aside>
-            <!--End of Gallery-->
-        <!--End of Content Section-->
+    <!-- Video Placeholder Section - Positioned Between Hero and White Block -->
+    <div class="video-placeholder-container container">
+      <div class="video-placeholder">
+        <!-- Video will go here -->
+      </div>
+    </div>
 
-        <!--Testimonials-->
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+    <!-- Wrapper for Sections with White Background -->
+    <div class="white-background-sections">
 
-            <div class="row clearfix">
+      <section id="stats" class="stats-section">
+        <div class="container">
+          <div class="stats-card">
+            <div class="stats-container">
+              <div class="stat-item">
+                <h2>130K+</h2>
+                <p>cases covered</p>
+              </div>
+              <div class="stat-item">
+                <h2>2+</h2>
+                <p>courts covered</p>
+              </div>
+              <div class="stat-item">
+                <h2>780K+</h2>
+                <p>hearings covered</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div class="section-heading">
-                    <!-- <h3>TEAM</h3> -->
-                    <h2 class="section-title">Team</h2>
-                    <h4 class="section-subtitle">
-                        The Professeer has been developed by an inter disciplinary team of economists, data scientists and lawyers, who've struggled with their own cases in Indian courts.
-                    </h4>
-                </div>
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="https://www.emergingmarketsconference.org/_next/image?url=https%3A%2F%2Fapi.emergingmarketsconference.org%2Fuploads%2Fuser%2F1712989011650-bhargavi.jpeg&w=3840&q=75" alt="User"/>
-                    <p> Lawyer by training; has first hand experience of litigation and litigating lawyers in Indian courts; brings to the table her decade-long experience of manually building case lifecycle datasets; struggling academic and wannabe entrepreneur, all thanks to her Gujarati genes.
-                    </p>
-                    <footer>Bhargavi Zaveri</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
+      <section id="features" class="features-section">
+        <div class="container">
+          <div class="section-pill-container">
+            <span class="section-pill">Features</span>
+          </div>
+          <h2 class="section-title">Power up your litigation strategy</h2>
+          <p class="section-subtext">Enhance your legal approach with data-driven insights into judges, case timelines,
+            and legal representation.</p>
 
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="https://xkdr.org/files/author/1653288044-author.jpg" alt="User"/>
-                    <p> Lawyer by training; has experience building systems and processes needed to keep large databases and teams running; brings to the table her hunger to learn across fields; wannabe coder and data analyst.</p>
-                    <footer>Pavithra Manivannan</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="https://xkdr.org/files/author/b509081f-c96f-4f2a-bf59-1af46789bf9c1679905890-author.jpg" alt="User"/>
-                    <p>Management consultant with experience across sectors ranging from infrastructure IT to consumer IT; has set up complex data systems for more complex organizations; brings to the table developer experience and all the innate skills that consultants are born with.</p>
-                    <footer> Siddarth Raman </footer>
-                </blockquote>   
-
+          <div class="features-grid">
+            <!-- Feature Card 1: Text Left, Image Right -->
+            <div class="feature-card">
+              <div class="feature-text">
+                <span class="pill">JUDGES</span>
+                <h3 class="card-title">Know your judge</h3>
+                <ul class="card-points">
+                  <li>When will your case get disposed?</li>
+                  <li>When will you get your first hearing?</li>
+                  <li>What are the chances of interim relief?</li>
+                  <li>Will the judge change?</li>
+                </ul class="card-points">
+              </div>
+              <div class="feature-image">
+                <img src="images/screenshots/knowyourjudge.png" alt="Judge Analytics Screenshot">
+              </div>
             </div>
 
-        </aside>
-
-
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
-
-            <div class="row clearfix">
-
-
-                <!--User Testimonial-->
-            <blockquote class="col-3 testimonial classic">
-                <img src="https://xkdr.org/files/author/1653979312-author.jpg" alt="User"/>
-                <p> An aeronautical engineer turned economist turned public intellectual; a wannabe lawyer who believes in the vision of making courts and litigants' lives more predictable; brings eternal optimism to the table. </p>
-                <footer>Ajay Shah</footer>
-            </blockquote>
-
-            <blockquote class="col-3 testimonial classic">
-                <img src="https://xkdr.org/files/author/b62077b6-4e13-45eb-93d3-f083d5f5580c1685616651-author.jpg" alt="User"/>
-                <p> Trained engineer and statistician; developed a deep interest in applying a quantitative lens to the working of courts; brings decades of statistical modelling knowledge and endless patience to the table.</p>
-                <footer>Susan Thomas</footer>
-            </blockquote>
-
-            <blockquote class="col-3 testimonial classic">
-                <img src="https://xkdr.org/files/author/1653979091-author.jpg" alt="User"/>
-                <p> Specializes in large-scale data systems and NLP. Has built machine learning infrastructure for legal document processing and automated analysis systems. Brings expertise in high performance computing and natural language processing solutions.</p>                <footer>Ayush Patnaik</footer>
-            </blockquote>
-
+            <!-- Feature Card 2: Text Left, Image Right (Removed alt-layout) -->
+            <div class="feature-card">
+              <div class="feature-text">
+                <span class="pill">ADVOCATES</span>
+                <h3 class="card-title">Know your lawyer</h3>
+                <ul class="card-points">
+                  <li>What's your lawyer's history before a judge?</li>
+                  <li>How often did they win?</li>
+                </ul class="card-points">
+              </div>
+              <div class="feature-image">
+                <img src="images/screenshots/knowyourlawyer.png" alt="Advocate Analytics Screenshot">
+              </div>
             </div>
 
-        </aside>
-
-        
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
-
-            <div class="row clearfix">
-
-                <blockquote class="col-3 testimonial classic">
-                    <img src="https://xkdr.org/files/author/f256cdbe-5adb-4a94-9c0f-30e43f52d6da1731488657-author.jpg" alt="User"/>
-                    <p>Policy researcher specializing in data analysis and evidence-based solutions. Has worked on economic development projects and trade policy analysis. Brings expertise in quantitative research methods and policy impact assessment.</p>
-                    <footer> Atibhi Sharma </footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
+            <!-- Feature Card 3: Text Left, Image Right -->
+            <div class="feature-card">
+              <div class="feature-text">
+                <span class="pill">FINANCES</span>
+                <h3 class="card-title">Know your costs</h3>
+                <ul class="card-points">
+                  <li>How many hearings does it take?</li>
+                  <li>How many of these will be adjournments?</li>
+                  <li>When will my case make progress?</li>
+                </ul class="card-points">
+              </div>
+              <div class="feature-image">
+                <img src="images/screenshots/knowyourcosts.png" alt="Cost Analytics Screenshot">
+              </div>
             </div>
 
-        </aside>
-        <!--End of Testimonials-->
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
-
-            <div class="row clearfix">
-                <div class="section-heading">
-                    <h2 class="section-title">Partners</h2>
-                </div>
-                <!-- E2E Networks -->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="https://cdn.prod.website-files.com/6473d8d02a3cf26273f27856/6711fb20fbc396e5f83326cc_homepage.png" alt="E2E Networks Logo" style="background-color: 0a223e;"/>
-                    <p>
-                        Our machine learning models are trained and deployed using E2E Networks' high-performance computing infrastructure.
-                    </p>
-                    <footer>E2E Networks - Our Computing Partner</footer>
-                </blockquote>
-                
-                <!-- XKDR Forum -->
-                <blockquote class="col-3 testimonial classic">
-                    <br>
-                    <img src="https://xkdr.org/frontend/assets/image/full_logo.svg" alt="XKDR Forum Logo"/>
-                    <p>
-                        XKDR Forum, with its cross-disciplinary approach, supports our R&D efforts by leveraging its expertise in law, economics, and data science.
-                    </p>
-                    <footer>XKDR Forum - Our Research Partner</footer>
-                </blockquote>
+            <!-- Feature Card 4: Text Left, Image Right (Removed alt-layout) -->
+            <div class="feature-card">
+              <div class="feature-text">
+                <span class="pill">CASES</span>
+                <h3 class="card-title">Know your case</h3>
+                <ul class="card-points">
+                  <li>When will your case get disposed?</li>
+                  <li>When will you get your first hearing?</li>
+                  <li>What are the chances of interim relief?</li>
+                  <li>this copy needs change^</li>
+                </ul class="card-points">
+              </div>
+              <div class="feature-image">
+                <img src="images/screenshots/knowyourcase.png" alt="Case Analytics Screenshot">
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-        </aside>
+      <section id="backed-research" class="case-studies-section">
+        <div class="container">
+          <div class="section-pill-container">
+            <span class="section-pill">Insights</span>
+          </div>
+          <h2 class="section-title">Backed By Research</h2>
+          <p class="section-subtext">Evidence-based legal intelligence, for informed decisions.</p>
+          <div class="card-grid">
+            <div class="info-card">
+              <h3>Which commercial court do litigants prefer?</h3>
+              <p>A survey of people who regularly litigate before Indian commercial courts for their preferences.</p>
+              <a href="https://www.xkdr.org/paper/evaluating-contract-enforcement-by-courts-in-india-a-litigants-lens" class="read-more">Read More ➔</a>
+            </div>
+            <div class="info-card">
+              <h3>Do court vacations matter?</h3>
+              <p>Some first estimates on the impact of court vacations on case durations and case disposal. </p>
+              <a href="https://blog.theleapjournal.org/2024/09/do-court-vacations-matter-evidence-from.html#gsc.tab=0" class="read-more">Read More ➔</a>
+            </div>
+            <div class="info-card">
+              <h3>Will mediation in commercial disputes help litigants?</h3>
+              <p>Mediation is often pushed as a solution for reducing court pendency. But, this does not help litigants as the failure rate of mediation is high.</p>
+              <a href="https://www.ndtvprofit.com/opinion/why-mandating-mediation-will-not-be-effective-for-litigants-in-commercial-disputes" class="read-more">Read More ➔</a>
+            </div>
+            <div class="info-card">
+              <h3>A litigant-friendly measurement framework for courts</h3>
+              <p>Information on efficiency, effectiveness, fairness, predictability, and access to courts are crucial for a litigant's decision-making process. But how do we measure these aspects of a court's performance?</p>
+              <a href="https://www.xkdr.org/paper/evaluating-courts-from-a-litigants-perspective-a-project-report" class="read-more">Read More ➔</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="case-studies" class="case-studies-section">
+        <div class="container">
+          <div class="section-pill-container">
+            <span class="section-pill">User Cases</span>
+          </div>
+          <h2 class="section-title">Case Studies</h2>
+          <p class="section-subtext">Evidence-based legal intelligence, for informed decisions.</p>
+          <div class="card-grid">
+            <div class="info-card">
+              <h3>Title 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <a href="#" class="read-more">Read More ➔</a>
+            </div>
+            <div class="info-card">
+              <h3>Title 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <a href="#" class="read-more">Read More ➔</a>
+            </div>
+            <div class="info-card">
+              <h3>Title 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <a href="#" class="read-more">Read More ➔</a>
+            </div>
+          </div>
+        </div>
+      </section>
       
-        <!--End of Clients-->
 
-    </main>
-    <!--End Main Content Area-->
-
-
-    <!--Footer-->
-    <footer id="landing-footer" class="clearfix">
-        <div class="row clearfix">
-
-            <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
-
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <div class="section-pill-container">
+            <span class="section-pill">Testimonials</span>
+          </div>
+          <h2 class="section-title">What Customers Think</h2>
+          <p class="section-subtext">Real experiences from users navigating the legal system with The Professeer.</p>
+          <div class="card-grid">
+            <div class="testimonial-card">
+              <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <div class="author">
+                <img src="testimonial1.png" alt="Jonathan B. Marley">
+                <div class="author-info">
+                  <strong>Jonathan B. Marley</strong>
+                  <span>@johnathon</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <div class="author">
+                <img src="testimonial2.png" alt="Jonathan B. Marley">
+                <div class="author-info">
+                  <strong>Jonathan B. Marley</strong>
+                  <span>@johnathon</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <div class="author">
+                <img src="images/user-images/user-1.jpg" alt="Jonathan B. Marley">
+                <div class="author-info">
+                  <strong>Jonathan B. Marley</strong>
+                  <span>@johnathon</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!--End of Footer-->
+      </section>
 
-</div>
+      <section id="cta" class="cta-section">
+        <div class="container cta-container">
+          <h2>Ready to <span class="underline">upgrade</span> your legal strategy?</h2>
+          <div class="cta-buttons">
+            <a href="#" class="button button-primary">Get Started</a>
+            <a href="#" class="button button-secondary">Schedule a Call</a>
+          </div>
+        </div>
+      </section>
 
-<!-- Include JavaScript resources -->
-<script src="js/jquery.1.8.3.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/featherlight.min.js"></script>
-<script src="js/featherlight.gallery.min.js"></script>
-<script src="js/jquery.enllax.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.stickyNavbar.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/images-loaded.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/site.js"></script>
+    </div> <!-- End White Background Sections Wrapper -->
 
+    <!-- Team Section - Remains on Beige Background -->
+    <section id="team" class="team-section">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <p class="section-subtext">Developed by an inter disciplinary team of economists, data scientists and lawyers,
+          who've struggled with their own cases in Indian courts.</p>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="images/user-images/Bhargavi.png" alt="Bhargavi Zaveri">
+            <h3>Bhargavi Zaveri</h3>
+            <p>Lawyer</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Pavithra.png" alt="Pavithra Manivannan">
+            <h3>Pavithra Manivannan</h3>
+            <p>Lawyer</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Ajay.png" alt="Ajay Shah">
+            <h3>Ajay Shah</h3>
+            <p>Economist</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Siddarth.png" alt="Siddarth Raman">
+            <h3>Siddarth Raman</h3>
+            <p>Systems Designer</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Ayush.png" alt="Ayush Patnaik">
+            <h3>Ayush Patnaik</h3>
+            <p>Data Scientist</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Susan.png" alt="Susan Thomas">
+            <h3>Susan Thomas</h3>
+            <p>Statistician</p>
+          </div>
+          <div class="team-member">
+            <img src="images/user-images/Atibhi.png" alt="Atibhi Sharma">
+            <h3>Atibhi Sharma</h3>
+            <p>Economist</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- End Team Section -->
+
+  </main>
+
+  <!-- Footer - Has White Background -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="images/banner-images/owl2.png" alt="The Professeer Logo Small">
+        <div class="logo-text">The<br>Professeer</div>
+      </div>
+      <div class="footer-find-us">
+        <h3>Find Us</h3>
+        <p>
+          201, Samarpan Building, Chakala,<br>
+          Andheri East, Mumbai - 400059.
+        </p>
+        <a href="mailto:info@theprofesseer.com">info@theprofesseer.com</a>
+      </div>
+      <div class="footer-partners">
+        <h3>Partners</h3>
+        <p>
+          <a href="#">E2E Networks</a> - Computing<br>
+          <a href="#">XKDR Forum</a> - Research
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
+
 </html>

@@ -1,177 +1,680 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  h1, h2, h3 {
-    color: #111;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Header */
-  .header {
-    background-color: #001F3F;
-    color: #FFF;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 1rem;
-  }
-  
-  /* Mission Section */
-  .mission {
-    background-color: #F8F9FA;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .mission h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Features Section */
-  .features {
-    padding: 40px 20px;
-  }
-  
-  .features .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .feature ul {
-    list-style: none;
-  }
-  
-  .feature ul li {
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  
-  /* Data Coverage */
-  .data-coverage {
-    background-color: #F8F9FA;
-    padding: 40px 20px;
-  }
-  
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    gap: 20px;
-  }
-  
-  .stat {
-    background-color: #E9ECEF;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  /* Data Info */
-  .data-info {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .data-info h2 {
-    margin-bottom: 20px;
-  }
-  
-  .data-info p {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* CTA */
-  .cta-container {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .cta {
-    background-color: #001F3F;
-    color: #FFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cta:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #001F3F;
-    color: #FFF;
-    text-align: center;
-    padding: 20px 0;
-  }
+/* --- Global Settings and Variables --- */
+:root {
+  --bg-beige: #fff9ec;
+  --bg-white: #ffffff;
+  --bg-light-blue: #E9F3FF;
+  --bg-team-photo: #efdab8;
+  --text-primary: #333F3D;
+  --text-secondary: #364341;
+  --accent-color: #19569A;
+  --video-stroke: #C3C2ED;
 
-  .feature-row {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
+  --font-primary: 'Aspekta', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+
+  --content-max-width: 1180px;
+  --section-spacing: 3.5rem;
+  /* Default vertical spacing between sections */
+  --card-gap: 48px;
+  --title-subtext-gap: 0.2em;
+  --pill-title-gap: 16px;
+  --section-pill-title-gap: 16px;
+}
+
+/* ... (reset styles) ... */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-beige);
+  color: var(--text-primary);
+  font-family: var(--font-secondary);
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--title-subtext-gap);
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+p.subtext,
+.section-subtext {
+  color: var(--text-secondary);
+  line-height: 119%;
+  font-size: 1.3rem;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ... (list styles with fixed bullet) ... */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+li::before {
+  color: var(--accent-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: inherit;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Standard section padding */
+section {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+
+/* --- Buttons --- */
+/* ... (button styles remain the same) ... */
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-secondary);
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-primary {
+  background-color: var(--accent-color);
+  color: var(--bg-white);
+  border-color: var(--accent-color);
+}
+
+.button-primary:hover {
+  background-color: #144a8c;
+  border-color: #144a8c;
+  text-decoration: none;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.button-secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-white);
+  text-decoration: none;
+}
+
+/* --- Header --- */
+/* Header remains on beige */
+.site-header {
+  background-color: var(--bg-beige);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+}
+
+/* ... (header container, logo, nav styles) ... */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.main-nav ul {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 0;
+}
+
+.main-nav a {
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* --- Hero Section --- */
+/* Hero remains on beige, adjust padding */
+.hero-section {
+  padding-top: var(--section-spacing);
+  /* Add top padding */
+  padding-bottom: calc(var(--section-spacing) / 4);
+  /* Space before video */
+  /* No background color needed, inherits from body */
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  /* padding-bottom removed here */
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content>.subtext {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  flex-basis: 40%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* FIXED: Underline style */
+h1 .underline,
+h2 .underline {
+  /* Added h2 here for CTA */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-color: #19569A;
+  text-decoration-thickness: 8.5%;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  /* Remove border fallback if text-decoration works reliably */
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+/* --- Video Placeholder --- */
+/* Container for alignment and spacing */
+.video-placeholder-container {
+  /* Spacing above and below the video box */
+  /* padding-top: calc(var(--section-spacing) / 2); */
+  padding-bottom: calc(var(--section-spacing) / 2);
+}
+
+.video-placeholder {
+  border: 3px solid var(--video-stroke);
+  min-height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  /* Takes width of container */
+  border-radius: 12px;
+  background-color: var(--bg-white);
+  /* Keep white background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder::before {
+  content: "";
+}
+
+
+/* --- White Background Section Wrapper --- */
+.white-background-sections {
+  background-color: var(--bg-white);
+  /* Optional: add subtle rounding to the white block */
+  /* border-radius: 16px; */
+  /* The padding of the first/last sections inside will create the internal space */
+  /* Add margin to space it before the Team section */
+  margin-bottom: var(--section-spacing);
+}
+
+/* --- Sections INSIDE the White Wrapper --- */
+
+/* Stats Section - now inside white block */
+.stats-section {
+  /* Adjust padding if it looks too much combined with wrapper */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* Override default section padding */
+  /* padding-top: var(--section-spacing); */
+  /* padding-bottom: var(--section-spacing); */
+}
+
+.stats-card {
+  background-color: var(--bg-light-blue);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.stat-item p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
+/* Features Section - now inside white block */
+.features-section {
+  /* Keep standard padding */
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+/* ... (section pill styles) ... */
+.section-pill-container {
+  text-align: center;
+  margin-bottom: var(--section-pill-title-gap);
+}
+
+.section-pill {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  margin-bottom: var(--title-subtext-gap);
+}
+
+.features-grid {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+/* FIXED: All feature cards use this layout */
+.feature-card {
+  background-color: var(--bg-light-blue);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
 }
 
 .feature-text {
-    flex: 1;
-    order: 1;
+  flex: 1;
+  order: 1;
+  /* Text on left */
 }
 
 .feature-image {
-    flex: 1;
-    order: 2;
+  flex-basis: 50%;
+  order: 2;
+  /* Image on right */
+  border-radius: 8px;
+  overflow: hidden;
+  align-self: stretch;
+  display: flex;
 }
 
 .feature-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-@media (max-width: 768px) {
-    .feature-row {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .feature-text {
-        order: 1;
-        margin-bottom: 2rem;
-    }
-    
-    .feature-image {
-        order: 2;
-    }
+.pill {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--bg-white);
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.54px;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
 }
+
+.card-title {
+  font-family: var(--font-secondary);
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.card-points {
+  list-style: disc; /* Ensures bullet points are visible */
+  padding-left: 1.5rem; /* Adjust this value to align with the title */
+  margin: 0; 
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+
+/* Case Studies & Testimonials Sections - now inside white block */
+.case-studies-section,
+.testimonials-section {
+  /* Removed background color, inherits from white wrapper */
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--card-gap);
+}
+
+.info-card,
+.testimonial-card {
+  background-color: var(--bg-light-blue);
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ... (Case studies specific styles) ... */
+.info-card h3 {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+}
+
+.info-card p {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  font-weight: 700;
+  color: var(--accent-color);
+  align-self: flex-start;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin-left: -15px;
+}
+
+.read-more:hover {
+  text-decoration: none;
+  background-color: #d8e7fa;
+}
+
+/* ... (Testimonials specific styles) ... */
+.testimonial-card .quote {
+  font-style: italic;
+  color: var(--text-primary);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info strong {
+  display: block;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.author-info span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cta-section {
+  text-align: center;
+  /* Keep standard padding */
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+.cta-container h2 {
+  margin-bottom: 2rem;
+}
+
+/* .cta-container h2 .underline uses global rule */
+.cta-buttons {
+  margin-top: 20px;
+}
+
+
+/* --- Team Section --- */
+/* Team section remains on beige */
+.team-section {
+  /* background-color: var(--bg-beige); Inherited */
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--card-gap);
+  text-align: center;
+  justify-items: center;
+}
+
+.team-member {
+  max-width: 220px;
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  background-color: var(--bg-team-photo);
+  display: block;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+
+/* --- Footer --- */
+/* Footer has white background */
+.site-footer {
+  background-color: var(--bg-white);
+  padding: 60px 0;
+  /* Reduced padding for footer */
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  /* Optional border */
+}
+
+/* ... (footer container and content styles) ... */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo img {
+  height: 5rem;
+  width: auto;
+}
+
+.footer-logo .logo-text {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.footer-find-us,
+.footer-partners {
+  flex-basis: 25%;
+}
+
+.footer-find-us h3,
+.footer-partners h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
+
+.footer-find-us p,
+.footer-partners p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.footer-find-us a,
+.footer-partners a {
+  color: var(--accent-color);
+  display: inline-block;
+}
+
+.footer-find-us a:hover,
+.footer-partners a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Placeholders --- */
+/*
+@media (max-width: 1200px) { ... }
+@media (max-width: 992px) { ... }
+@media (max-width: 768px) { ... }
+@media (max-width: 576px) { ... }
+*/
