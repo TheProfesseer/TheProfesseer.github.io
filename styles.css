@@ -14,11 +14,10 @@
 
   --content-max-width: 1180px;
   --section-spacing: 3.5rem;
-  /* Default vertical spacing between sections */
-  --card-gap: 48px;
+  --card-gap: 3rem;
   --title-subtext-gap: 0.2em;
-  --pill-title-gap: 16px;
-  --section-pill-title-gap: 16px;
+  --pill-title-gap: 1rem;
+  --section-pill-title-gap: 1rem;
 }
 
 * {
@@ -36,7 +35,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-secondary);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: -0.04em;
 }
 
@@ -79,10 +78,10 @@ p {
 p.subtext,
 .section-subtext {
   color: var(--text-secondary);
-  line-height: 119%;
+  line-height: 1.19;
   font-size: 1.3rem;
-  margin-bottom: 60px;
-  max-width: 700px;
+  margin-bottom: 3.75rem;
+  max-width: 43.75rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -103,7 +102,6 @@ img {
   display: block;
 }
 
-/* ... (list styles with fixed bullet) ... */
 ul {
   list-style: none;
   padding-left: 0;
@@ -126,30 +124,27 @@ li::before {
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
-/* Standard section padding */
 section {
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
 }
 
-
 /* --- Buttons --- */
-/* ... (button styles remain the same) ... */
 .button {
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
   font-weight: 500;
   text-align: center;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   font-family: var(--font-secondary);
   border: 1px solid transparent;
   cursor: pointer;
-  margin: 5px;
+  margin: 0.3125rem;
 }
 
 .button-primary {
@@ -179,11 +174,10 @@ section {
 /* --- Header --- */
 .site-header {
   background-color: var(--bg-beige);
-  padding: 20px 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.30);
 }
 
-/* ... (header container, logo, nav styles) ... */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -201,7 +195,7 @@ section {
   list-style: none;
   list-style-type: none;
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
   margin-top: 0;
 }
 
@@ -227,19 +221,18 @@ section {
   display: flex;
   align-items: center;
   gap: 2em;
-  /* padding-bottom removed here */
 }
 
 .hero-content {
   flex: 1;
 }
 
-.hero-content>.subtext {
+.hero-content > .subtext {
   text-align: left;
   margin-left: 0;
   margin-right: 0;
   max-width: none;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .hero-image {
@@ -248,14 +241,12 @@ section {
 }
 
 .hero-image img {
-  max-width: 350px;
+  max-width: 21.875rem;
   margin: 0 auto;
 }
 
-/* FIXED: Underline style */
 h1 .underline,
 h2 .underline {
-  /* Added h2 here for CTA */
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
@@ -263,32 +254,25 @@ h2 .underline {
   text-decoration-thickness: 8.5%;
   text-underline-offset: auto;
   text-underline-position: from-font;
-  /* Remove border fallback if text-decoration works reliably */
   border-bottom: none;
   padding-bottom: 0;
 }
 
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 /* --- Video Placeholder --- */
-/* Container for alignment and spacing */
 .video-placeholder-container {
-  /* Spacing above and below the video box */
-  /* padding-top: calc(var(--section-spacing) / 2); */
   padding-bottom: calc(var(--section-spacing) / 2);
 }
 
 .video-placeholder {
   border: 3px solid var(--video-stroke);
-  min-height: 500px;
+  min-height: 31.25rem;
   width: 100%;
-  border-radius: 15px;
-  /* Takes width of container */
-  border-radius: 12px;
+  border-radius: 0.75rem;
   background-color: var(--bg-white);
-  /* Keep white background */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,33 +282,25 @@ h2 .underline {
   content: "";
 }
 
-
 /* --- White Background Section Wrapper --- */
 .white-background-sections {
   background-color: var(--bg-white);
-  /* Optional: add subtle rounding to the white block */
-  /* border-radius: 16px; */
-  /* The padding of the first/last sections inside will create the internal space */
-  /* Add margin to space it before the Team section */
   margin-bottom: var(--section-spacing);
+  border-radius: 2rem;
 }
 
 /* --- Sections INSIDE the White Wrapper --- */
 
-/* Stats Section - now inside white block */
+/* Stats Section */
 .stats-section {
-  /* Adjust padding if it looks too much combined with wrapper */
-  padding-top: 60px;
-  padding-bottom: 60px;
-  /* Override default section padding */
-  /* padding-top: var(--section-spacing); */
-  /* padding-bottom: var(--section-spacing); */
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .stats-card {
   background-color: var(--bg-light-blue);
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
   max-width: var(--content-max-width);
   margin: 0 auto;
   text-align: center;
@@ -350,15 +326,12 @@ h2 .underline {
   margin-bottom: 0;
 }
 
-
-/* Features Section - now inside white block */
+/* Features Section */
 .features-section {
-  /* Keep standard padding */
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
 }
 
-/* ... (section pill styles) ... */
 .section-pill-container {
   text-align: center;
   margin-bottom: var(--section-pill-title-gap);
@@ -369,8 +342,8 @@ h2 .underline {
   background-color: transparent;
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  padding: 6px 18px;
-  border-radius: 50px;
+  padding: 0.375rem 1.125rem;
+  border-radius: 3.125rem;
   font-size: 1.1rem;
   font-weight: 500;
   font-family: var(--font-primary);
@@ -387,28 +360,25 @@ h2 .underline {
   gap: var(--card-gap);
 }
 
-/* FIXED: All feature cards use this layout */
 .feature-card {
   background-color: var(--bg-light-blue);
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 2.5rem;
   overflow: hidden;
 }
 
 .feature-text {
   flex: 1;
   order: 1;
-  /* Text on left */
 }
 
 .feature-image {
   flex-basis: 50%;
   order: 2;
-  /* Image on right */
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
   align-self: stretch;
   display: flex;
@@ -425,36 +395,34 @@ h2 .underline {
   display: inline-block;
   background-color: var(--accent-color);
   color: var(--bg-white);
-  padding: 6px 15px;
-  border-radius: 8px;
+  padding: 0.375rem 0.9375rem;
+  border-radius: 0.5rem;
   font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.034em;
   font-family: var(--font-secondary);
   text-transform: uppercase;
 }
 
 .card-title {
   font-family: var(--font-secondary);
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 0.3rem;
 }
 
 .card-points {
-  list-style: disc; /* Ensures bullet points are visible */
-  padding-left: 1.5rem; /* Adjust this value to align with the title */
-  margin: 0; 
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
   font-weight: 400;
   font-size: 1.3rem;
 }
 
-
-/* Case Studies & Testimonials Sections - now inside white block */
+/* Case Studies & Testimonials Sections */
 .case-studies-section,
 .testimonials-section {
-  /* Removed background color, inherits from white wrapper */
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
 }
@@ -468,13 +436,12 @@ h2 .underline {
 .info-card,
 .testimonial-card {
   background-color: var(--bg-light-blue);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 1.875rem;
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
 }
 
-/* ... (Case studies specific styles) ... */
 .info-card h3 {
   margin-bottom: 1rem;
   line-height: 2rem;
@@ -491,10 +458,10 @@ h2 .underline {
   color: var(--accent-color);
   align-self: flex-start;
   display: inline-block;
-  padding: 8px 15px;
-  border-radius: 6px;
+  padding: 0.5rem 0.9375rem;
+  border-radius: 0.375rem;
   transition: background-color 0.2s ease;
-  margin-left: -15px;
+  margin-left: -0.9375rem;
 }
 
 .read-more:hover {
@@ -502,7 +469,6 @@ h2 .underline {
   background-color: #d8e7fa;
 }
 
-/* ... (Testimonials specific styles) ... */
 .testimonial-card .quote {
   font-style: italic;
   color: var(--text-primary);
@@ -513,13 +479,13 @@ h2 .underline {
 .author {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
   margin-top: auto;
 }
 
 .author img {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -535,9 +501,9 @@ h2 .underline {
   color: var(--text-secondary);
 }
 
+/* CTA Section */
 .cta-section {
   text-align: center;
-  /* Keep standard padding */
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
 }
@@ -546,16 +512,12 @@ h2 .underline {
   margin-bottom: 2rem;
 }
 
-/* .cta-container h2 .underline uses global rule */
 .cta-buttons {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
-
 /* --- Team Section --- */
-/* Team section remains on beige */
 .team-section {
-  /* background-color: var(--bg-beige); Inherited */
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
 }
@@ -569,13 +531,13 @@ h2 .underline {
 }
 
 .team-member {
-  max-width: 220px;
+  max-width: 13.75rem;
 }
 
 .team-member img {
-  width: 180px;
-  height: 180px;
-  border-radius: 12px;
+  width: 11.25rem;
+  height: 11.25rem;
+  border-radius: 0.75rem;
   object-fit: cover;
   margin: 0 auto 1rem auto;
   background-color: var(--bg-team-photo);
@@ -595,31 +557,26 @@ h2 .underline {
   margin-bottom: 0;
 }
 
-
 /* --- Footer --- */
-/* Footer has white background */
 .site-footer {
   background-color: var(--bg-white);
-  padding: 60px 0;
-  /* Reduced padding for footer */
+  padding: 3.75rem 0;
   color: var(--text-secondary);
   font-size: 0.9rem;
   border-top: 1px solid #eee;
-  /* Optional border */
 }
 
-/* ... (footer container and content styles) ... */
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .footer-logo img {
@@ -665,22 +622,14 @@ h2 .underline {
   text-decoration: underline;
 }
 
-/* --- Responsive Placeholders --- */
-/*
-@media (max-width: 1200px) { ... }
-@media (max-width: 992px) { ... }
-@media (max-width: 768px) { ... }
-@media (max-width: 576px) { ... }
-*/
-
 /* --- Responsive Styles --- */
 
-/* Medium Devices (Tablets Landscape, Smaller Desktops - <= 992px) */
+/* Medium Devices (<= 992px) */
 @media (max-width: 992px) {
 
   :root {
     --section-spacing: 3rem;
-    --card-gap: 30px;
+    --card-gap: 1.875rem;
   }
 
   h1 {
@@ -694,63 +643,53 @@ h2 .underline {
   p.subtext,
   .section-subtext {
     font-size: 1.15rem;
-    margin-bottom: 40px;
-    max-width: 600px;
+    margin-bottom: 2.5rem;
+    max-width: 37.5rem;
   }
 
   .container {
-    max-width: 960px; /* Adjust container width */
+    max-width: 960px;
   }
 
-  /* Header */
   .main-nav ul {
-    gap: 20px; /* Reduce nav gap */
+    gap: 1.25rem;
   }
 
   .header-container .button {
-      padding: 10px 20px; /* Slightly smaller button */
-      font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
   }
 
-  /* Hero */
   .hero-container {
     gap: 1.5em;
-    flex-direction: column; /* Stack hero content and image */
+    flex-direction: column;
     text-align: center;
   }
 
-  .hero-content {
-    order: 2; /* Text below image */
-  }
-  .hero-image {
-      order: 1; /* Image above text */
-      flex-basis: auto; /* Reset basis */
-      margin-bottom: 2rem;
-  }
+  .hero-content { order: 2; }
+  .hero-image { order: 1; flex-basis: auto; margin-bottom: 2rem; }
 
- .hero-image img {
-    max-width: 300px; /* Slightly smaller hero image */
+  .hero-image img {
+    max-width: 18.75rem;
   }
 
   .hero-content > .subtext {
-    text-align: center; /* Center subtext when stacked */
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 600px; /* Limit width */
+    max-width: 37.5rem;
   }
 
   .hero-buttons {
-    justify-content: center; /* Center buttons */
+    justify-content: center;
   }
 
-  /* Video */
   .video-placeholder {
-    min-height: 400px; /* Reduce video height */
+    min-height: 25rem;
   }
 
-  /* Stats */
   .stats-card {
-    padding: 30px;
+    padding: 1.875rem;
   }
   .stat-item h2 {
     font-size: 2.5rem;
@@ -759,111 +698,89 @@ h2 .underline {
     font-size: 0.9rem;
   }
 
-  /* Features */
   .features-grid {
-    gap: var(--card-gap); /* Use reduced gap */
+    gap: var(--card-gap);
   }
   .feature-card {
-    flex-direction: column-reverse; /* Stack image and text */
-    padding: 30px;
-    gap: 25px;
+    flex-direction: column-reverse;
+    padding: 1.875rem;
+    gap: 1.5625rem;
     text-align: center;
   }
-  .feature-text {
-    order: 2; /* Text below image */
-    flex: auto; /* Reset flex property */
-  }
-  .feature-image {
-    order: 1; /* Image above text */
-    flex-basis: auto; /* Reset basis */
-    width: 100%; /* Allow image to take width */
-    align-self: center; /* Center image */
-  }
+  .feature-text { order: 2; flex: auto; }
+  .feature-image { order: 1; flex-basis: auto; width: 100%; align-self: center; }
   .card-title {
-      font-size: 1.8rem; /* Adjust card title size */
+    font-size: 1.8rem;
   }
-   .card-points {
-      font-size: 1.1rem; /* Adjust list font size */
-      text-align: left; /* Keep list items left-aligned */
-      display: inline-block; /* Center the list block itself */
-      padding-left: 2rem; /* Ensure bullets are visible */
+  .card-points {
+    font-size: 1.1rem;
+    text-align: left;
+    display: inline-block;
+    padding-left: 2rem;
   }
 
-
-  /* Case Studies / Testimonials Grid */
   .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--card-gap);
   }
   .info-card,
   .testimonial-card {
-    padding: 25px;
+    padding: 1.5625rem;
   }
 
-  /* Team Grid */
   .team-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--card-gap);
   }
   .team-member {
-    max-width: 200px; /* Adjust max width */
+    max-width: 12.5rem;
   }
   .team-member img {
-      width: 150px;
-      height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
   }
 
-  /* Footer */
   .footer-container {
-    flex-wrap: wrap; /* Allow items to wrap */
-    gap: 30px;
-    justify-content: center; /* Center items when wrapped */
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    justify-content: center;
     text-align: center;
   }
   .footer-logo,
   .footer-find-us,
   .footer-partners {
-    flex-basis: 45%; /* Roughly two columns */
-    text-align: left; /* Keep text left aligned in columns */
+    flex-basis: 45%;
+    text-align: left;
   }
-   .footer-logo {
-       flex-basis: 100%; /* Logo takes full width */
-       justify-content: center; /* Center logo items */
-       margin-bottom: 20px;
-   }
-   .footer-logo img {
-       height: 4rem;
-   }
-   .footer-logo .logo-text {
-       font-size: 1.2rem;
-   }
-
+  .footer-logo {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .footer-logo img {
+    height: 4rem;
+  }
+  .footer-logo .logo-text {
+    font-size: 1.2rem;
+  }
 }
 
 
-/* Small Devices (Tablets Portrait - <= 768px) */
+/* Small Devices (<= 768px) */
 @media (max-width: 768px) {
 
   :root {
     --section-spacing: 2.5rem;
-    --card-gap: 25px;
+    --card-gap: 1.5625rem;
   }
 
   body {
-    font-size: 15px; /* Slightly smaller base font */
+    font-size: 0.9375rem;
   }
 
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-   h3 {
-    font-size: 1.3rem;
-  }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.3rem; }
 
   p.subtext,
   .section-subtext {
@@ -872,235 +789,196 @@ h2 .underline {
   }
 
   .container {
-    padding-left: 20px; /* Increase side padding */
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
-  /* Header - Hide Nav, prepare for hamburger */
   .site-header {
-      padding: 15px 0;
+    padding: 0.9375rem 0;
   }
   .main-nav {
-    display: none; /* Hide navigation links for mobile menu */
-    /* Add styles for your mobile menu container/button here later */
+    display: none;
   }
   .header-container .button {
-      /* Decide how to handle the button - maybe hide it or move it to mobile menu */
-      /* display: none; */ /* Example: hide it */
-      margin-left: auto; /* Push button to right if nav is hidden */
+    margin-left: auto;
   }
   .logo {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
 
-  /* Hero */
   .hero-image img {
-    max-width: 250px;
+    max-width: 15.625rem;
   }
 
-  /* Video */
   .video-placeholder {
-    min-height: 300px;
+    min-height: 18.75rem;
   }
 
-  /* Stats */
   .stats-container {
-    flex-direction: column; /* Stack stats vertically */
-    gap: 25px;
+    flex-direction: column;
+    gap: 1.5625rem;
   }
   .stat-item h2 {
     font-size: 2.2rem;
   }
 
-  /* Features */
-   .card-title {
-      font-size: 1.6rem;
-  }
-   .card-points {
-      font-size: 1rem;
-  }
+  .card-title { font-size: 1.6rem; }
+  .card-points { font-size: 1rem; }
 
-  /* Case Studies / Testimonials Grid */
   .card-grid {
-    grid-template-columns: 1fr; /* 1 column */
+    grid-template-columns: 1fr;
     gap: var(--card-gap);
   }
-  /* Add margin between single-column cards if needed */
   .card-grid > *:not(:last-child) {
-      margin-bottom: var(--card-gap);
+    margin-bottom: var(--card-gap);
   }
 
-  /* Team Grid */
   .team-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--card-gap);
   }
   .team-member img {
-      width: 130px;
-      height: 130px;
+    width: 8.125rem;
+    height: 8.125rem;
   }
 
-  /* Footer */
   .footer-container {
-    flex-direction: column; /* Stack footer items vertically */
-    align-items: center; /* Center items */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   .footer-logo,
   .footer-find-us,
   .footer-partners {
-    flex-basis: auto; /* Reset basis */
-    width: 100%; /* Take full width */
-    text-align: center; /* Center text */
-    margin-bottom: 20px;
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.25rem;
   }
-   .footer-find-us h3,
-   .footer-partners h3 {
-       margin-bottom: 0.5rem;
-   }
+  .footer-find-us h3,
+  .footer-partners h3 {
+    margin-bottom: 0.5rem;
+  }
 }
 
 
-/* Extra Small Devices (Phones - <= 576px) */
+/* Extra Small Devices (<= 576px) */
 @media (max-width: 576px) {
 
   :root {
     --section-spacing: 2rem;
-    --card-gap: 20px;
+    --card-gap: 1.25rem;
   }
 
-   body {
-    font-size: 14px;
-    letter-spacing: -0.02em; /* Adjust letter spacing slightly if needed */
+  body {
+    font-size: 0.875rem;
+    letter-spacing: -0.02em;
   }
 
-  h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-   h3 {
-    font-size: 1.2rem;
-  }
+  h1 { font-size: 2.2rem; line-height: 1.3; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.2rem; }
 
   p.subtext,
   .section-subtext {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 
-   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+  .container {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
   }
 
-  /* Buttons */
   .button {
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      width: 80%; /* Make buttons wider for easier tapping */
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-      margin-bottom: 10px;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.9rem;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
   }
   .hero-buttons .button,
   .cta-buttons .button {
-      width: auto; /* Keep hero/cta buttons inline */
+    width: auto;
+    display: inline-block;
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
+  }
+  .hero-buttons .button:first-child,
+  .cta-buttons .button:first-child {
+    margin-bottom: 0.625rem;
+  }
+
+   .header-container .button {
       display: inline-block;
-      margin-left: 5px;
-      margin-right: 5px;
-  }
-   .hero-buttons .button:first-child,
-   .cta-buttons .button:first-child {
-       margin-bottom: 10px; /* Add space between stacked buttons if they wrap */
-   }
-
-  /* Header */
-  /* Styles for hamburger menu button would go here */
-  .header-container .button {
-    /* Ensure the button is visible and behaves like an inline element */
-    display: inline-block; /* Make it visible and inline */
-    width: auto;           /* Override the general '80%' width for buttons at this size */
-    /* Padding and font-size are inherited from the general .button rule at this breakpoint, making it smaller */
-    /* Reset margins that might be inherited from the general .button rule */
-    margin: 0;
-    vertical-align: middle; /* Helps align with the logo if needed */
-}
-
-  /* Hero */
-   .hero-image img {
-    max-width: 200px;
+      width: auto;
+      margin: 0;
+      vertical-align: middle;
   }
 
-  /* Video */
+  .hero-image img {
+    max-width: 12.5rem;
+  }
+
   .video-placeholder {
-    min-height: 250px;
+    min-height: 15.625rem;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 
-  /* Stats Card */
   .stats-card {
-      padding: 20px;
+    padding: 1.25rem;
   }
   .stat-item h2 {
     font-size: 2rem;
   }
 
-  /* Feature Card */
   .feature-card {
-      padding: 20px;
+    padding: 1.25rem;
   }
   .card-title {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
-   .card-points {
-      font-size: 0.95rem;
-      padding-left: 1.5rem; /* Adjust bullet indent */
+  .card-points {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
   }
 
-  /* Info/Testimonial Card */
   .info-card,
   .testimonial-card {
-      padding: 20px;
+    padding: 1.25rem;
   }
   .author {
-      gap: 10px;
+    gap: 0.625rem;
   }
   .author img {
-      width: 40px;
-      height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
-
-  /* Team Grid */
   .team-grid {
-    grid-template-columns: 1fr; /* 1 column */
-    gap: 30px; /* Increase gap slightly for single column */
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
   }
   .team-member {
-      max-width: 180px; /* Allow members to be centered */
+    max-width: 11.25rem;
   }
   .team-member img {
-      width: 120px;
-      height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
   }
 
-  /* Footer */
   .footer-logo img {
-      height: 3.5rem;
+    height: 3.5rem;
   }
-   .footer-logo .logo-text {
-       font-size: 1.1rem;
-   }
+  .footer-logo .logo-text {
+    font-size: 1.1rem;
+  }
   .site-footer {
-      padding: 40px 0;
-      font-size: 0.85rem;
+    padding: 2.5rem 0;
+    font-size: 0.85rem;
   }
 }
