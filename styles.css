@@ -166,8 +166,9 @@ section {
 }
 
 .button-secondary:hover {
-  background-color: var(--accent-color);
-  color: var(--bg-white);
+  background-color: var(--bg-light-blue);
+  color: black;
+  border: 1px solid black;
   text-decoration: none;
 }
 
