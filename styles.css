@@ -21,7 +21,6 @@
   --section-pill-title-gap: 16px;
 }
 
-/* ... (reset styles) ... */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -178,7 +177,6 @@ section {
 }
 
 /* --- Header --- */
-/* Header remains on beige */
 .site-header {
   background-color: var(--bg-beige);
   padding: 20px 0;
@@ -220,13 +218,9 @@ section {
 }
 
 /* --- Hero Section --- */
-/* Hero remains on beige, adjust padding */
 .hero-section {
   padding-top: var(--section-spacing);
-  /* Add top padding */
   padding-bottom: calc(var(--section-spacing) / 4);
-  /* Space before video */
-  /* No background color needed, inherits from body */
 }
 
 .hero-container {
@@ -678,3 +672,435 @@ h2 .underline {
 @media (max-width: 768px) { ... }
 @media (max-width: 576px) { ... }
 */
+
+/* --- Responsive Styles --- */
+
+/* Medium Devices (Tablets Landscape, Smaller Desktops - <= 992px) */
+@media (max-width: 992px) {
+
+  :root {
+    --section-spacing: 3rem;
+    --card-gap: 30px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p.subtext,
+  .section-subtext {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  .container {
+    max-width: 960px; /* Adjust container width */
+  }
+
+  /* Header */
+  .main-nav ul {
+    gap: 20px; /* Reduce nav gap */
+  }
+
+  .header-container .button {
+      padding: 10px 20px; /* Slightly smaller button */
+      font-size: 0.9rem;
+  }
+
+  /* Hero */
+  .hero-container {
+    gap: 1.5em;
+    flex-direction: column; /* Stack hero content and image */
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2; /* Text below image */
+  }
+  .hero-image {
+      order: 1; /* Image above text */
+      flex-basis: auto; /* Reset basis */
+      margin-bottom: 2rem;
+  }
+
+ .hero-image img {
+    max-width: 300px; /* Slightly smaller hero image */
+  }
+
+  .hero-content > .subtext {
+    text-align: center; /* Center subtext when stacked */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Limit width */
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Center buttons */
+  }
+
+  /* Video */
+  .video-placeholder {
+    min-height: 400px; /* Reduce video height */
+  }
+
+  /* Stats */
+  .stats-card {
+    padding: 30px;
+  }
+  .stat-item h2 {
+    font-size: 2.5rem;
+  }
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+
+  /* Features */
+  .features-grid {
+    gap: var(--card-gap); /* Use reduced gap */
+  }
+  .feature-card {
+    flex-direction: column-reverse; /* Stack image and text */
+    padding: 30px;
+    gap: 25px;
+    text-align: center;
+  }
+  .feature-text {
+    order: 2; /* Text below image */
+    flex: auto; /* Reset flex property */
+  }
+  .feature-image {
+    order: 1; /* Image above text */
+    flex-basis: auto; /* Reset basis */
+    width: 100%; /* Allow image to take width */
+    align-self: center; /* Center image */
+  }
+  .card-title {
+      font-size: 1.8rem; /* Adjust card title size */
+  }
+   .card-points {
+      font-size: 1.1rem; /* Adjust list font size */
+      text-align: left; /* Keep list items left-aligned */
+      display: inline-block; /* Center the list block itself */
+      padding-left: 2rem; /* Ensure bullets are visible */
+  }
+
+
+  /* Case Studies / Testimonials Grid */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: var(--card-gap);
+  }
+  .info-card,
+  .testimonial-card {
+    padding: 25px;
+  }
+
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: var(--card-gap);
+  }
+  .team-member {
+    max-width: 200px; /* Adjust max width */
+  }
+  .team-member img {
+      width: 150px;
+      height: 150px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 30px;
+    justify-content: center; /* Center items when wrapped */
+    text-align: center;
+  }
+  .footer-logo,
+  .footer-find-us,
+  .footer-partners {
+    flex-basis: 45%; /* Roughly two columns */
+    text-align: left; /* Keep text left aligned in columns */
+  }
+   .footer-logo {
+       flex-basis: 100%; /* Logo takes full width */
+       justify-content: center; /* Center logo items */
+       margin-bottom: 20px;
+   }
+   .footer-logo img {
+       height: 4rem;
+   }
+   .footer-logo .logo-text {
+       font-size: 1.2rem;
+   }
+
+}
+
+
+/* Small Devices (Tablets Portrait - <= 768px) */
+@media (max-width: 768px) {
+
+  :root {
+    --section-spacing: 2.5rem;
+    --card-gap: 25px;
+  }
+
+  body {
+    font-size: 15px; /* Slightly smaller base font */
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+   h3 {
+    font-size: 1.3rem;
+  }
+
+  p.subtext,
+  .section-subtext {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .container {
+    padding-left: 20px; /* Increase side padding */
+    padding-right: 20px;
+  }
+
+  /* Header - Hide Nav, prepare for hamburger */
+  .site-header {
+      padding: 15px 0;
+  }
+  .main-nav {
+    display: none; /* Hide navigation links for mobile menu */
+    /* Add styles for your mobile menu container/button here later */
+  }
+  .header-container .button {
+      /* Decide how to handle the button - maybe hide it or move it to mobile menu */
+      /* display: none; */ /* Example: hide it */
+      margin-left: auto; /* Push button to right if nav is hidden */
+  }
+  .logo {
+      font-size: 1.6rem;
+  }
+
+  /* Hero */
+  .hero-image img {
+    max-width: 250px;
+  }
+
+  /* Video */
+  .video-placeholder {
+    min-height: 300px;
+  }
+
+  /* Stats */
+  .stats-container {
+    flex-direction: column; /* Stack stats vertically */
+    gap: 25px;
+  }
+  .stat-item h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Features */
+   .card-title {
+      font-size: 1.6rem;
+  }
+   .card-points {
+      font-size: 1rem;
+  }
+
+  /* Case Studies / Testimonials Grid */
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: var(--card-gap);
+  }
+  /* Add margin between single-column cards if needed */
+  .card-grid > *:not(:last-child) {
+      margin-bottom: var(--card-gap);
+  }
+
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: var(--card-gap);
+  }
+  .team-member img {
+      width: 130px;
+      height: 130px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column; /* Stack footer items vertically */
+    align-items: center; /* Center items */
+    text-align: center;
+  }
+  .footer-logo,
+  .footer-find-us,
+  .footer-partners {
+    flex-basis: auto; /* Reset basis */
+    width: 100%; /* Take full width */
+    text-align: center; /* Center text */
+    margin-bottom: 20px;
+  }
+   .footer-find-us h3,
+   .footer-partners h3 {
+       margin-bottom: 0.5rem;
+   }
+}
+
+
+/* Extra Small Devices (Phones - <= 576px) */
+@media (max-width: 576px) {
+
+  :root {
+    --section-spacing: 2rem;
+    --card-gap: 20px;
+  }
+
+   body {
+    font-size: 14px;
+    letter-spacing: -0.02em; /* Adjust letter spacing slightly if needed */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+   h3 {
+    font-size: 1.2rem;
+  }
+
+  p.subtext,
+  .section-subtext {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+   .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Buttons */
+  .button {
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      width: 80%; /* Make buttons wider for easier tapping */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .hero-buttons .button,
+  .cta-buttons .button {
+      width: auto; /* Keep hero/cta buttons inline */
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+   .hero-buttons .button:first-child,
+   .cta-buttons .button:first-child {
+       margin-bottom: 10px; /* Add space between stacked buttons if they wrap */
+   }
+
+  /* Header */
+  /* Styles for hamburger menu button would go here */
+  .header-container .button {
+    /* Ensure the button is visible and behaves like an inline element */
+    display: inline-block; /* Make it visible and inline */
+    width: auto;           /* Override the general '80%' width for buttons at this size */
+    /* Padding and font-size are inherited from the general .button rule at this breakpoint, making it smaller */
+    /* Reset margins that might be inherited from the general .button rule */
+    margin: 0;
+    vertical-align: middle; /* Helps align with the logo if needed */
+}
+
+  /* Hero */
+   .hero-image img {
+    max-width: 200px;
+  }
+
+  /* Video */
+  .video-placeholder {
+    min-height: 250px;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+
+  /* Stats Card */
+  .stats-card {
+      padding: 20px;
+  }
+  .stat-item h2 {
+    font-size: 2rem;
+  }
+
+  /* Feature Card */
+  .feature-card {
+      padding: 20px;
+  }
+  .card-title {
+      font-size: 1.4rem;
+  }
+   .card-points {
+      font-size: 0.95rem;
+      padding-left: 1.5rem; /* Adjust bullet indent */
+  }
+
+  /* Info/Testimonial Card */
+  .info-card,
+  .testimonial-card {
+      padding: 20px;
+  }
+  .author {
+      gap: 10px;
+  }
+  .author img {
+      width: 40px;
+      height: 40px;
+  }
+
+
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 30px; /* Increase gap slightly for single column */
+  }
+  .team-member {
+      max-width: 180px; /* Allow members to be centered */
+  }
+  .team-member img {
+      width: 120px;
+      height: 120px;
+  }
+
+  /* Footer */
+  .footer-logo img {
+      height: 3.5rem;
+  }
+   .footer-logo .logo-text {
+       font-size: 1.1rem;
+   }
+  .site-footer {
+      padding: 40px 0;
+      font-size: 0.85rem;
+  }
+}
