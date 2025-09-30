@@ -524,12 +524,42 @@ h2 .underline {
 }
 
 .team-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--card-gap);
   text-align: center;
-  justify-content: center;
+  justify-items: center;
   align-items: flex-start;
+}
+
+/* First row - 2 members centered (Bhargavi, Siddarth) */
+.team-grid .team-member:nth-child(1) {
+  grid-column: 2 / 3;
+}
+.team-grid .team-member:nth-child(2) {
+  grid-column: 3 / 4;
+}
+
+/* Second row - 4 members (Pavithra, Ayush, Atibhi, Gokul) */
+.team-grid .team-member:nth-child(3) {
+  grid-column: 1 / 2;
+}
+.team-grid .team-member:nth-child(4) {
+  grid-column: 2 / 3;
+}
+.team-grid .team-member:nth-child(5) {
+  grid-column: 3 / 4;
+}
+.team-grid .team-member:nth-child(6) {
+  grid-column: 4 / 5;
+}
+
+/* Third row - 2 members centered (Ajay, Susan) */
+.team-grid .team-member:nth-child(7) {
+  grid-column: 2 / 3;
+}
+.team-grid .team-member:nth-child(8) {
+  grid-column: 3 / 4;
 }
 
 .team-member {
@@ -731,7 +761,7 @@ h2 .underline {
   }
 
   .team-grid {
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--card-gap);
   }
   .team-member {
@@ -836,8 +866,19 @@ h2 .underline {
   }
 
   .team-grid {
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--card-gap);
+  }
+  /* Reset grid positions for 2-column layout on tablets */
+  .team-grid .team-member:nth-child(1),
+  .team-grid .team-member:nth-child(2),
+  .team-grid .team-member:nth-child(3),
+  .team-grid .team-member:nth-child(4),
+  .team-grid .team-member:nth-child(5),
+  .team-grid .team-member:nth-child(6),
+  .team-grid .team-member:nth-child(7),
+  .team-grid .team-member:nth-child(8) {
+    grid-column: auto;
   }
   .team-member img {
     width: 8.125rem;
@@ -962,7 +1003,7 @@ h2 .underline {
   }
 
   .team-grid {
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.875rem;
   }
   .team-member {
