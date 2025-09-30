@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Engineer - Full Stack - The Professeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Aspekta';
+            src: url(fonts/Aspekta-400.woff2) format('woff2');
+            font-weight: 100 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Aspekta';
+            src: url(fonts/Aspekta-500.woff2) format('woff2');
+            font-weight: 500;
+            font-style: bold;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333F3D;
+            background: #fff9ec;
+            min-height: 100vh;
+            letter-spacing: -0.04em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            background: #19569A;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-name {
+            font-family: 'Aspekta', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.04em;
+        }
+
+        .job-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #ecf0f1;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-family: 'Aspekta', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #333F3D;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #19569A;
+            display: inline-block;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #364341;
+            font-size: 1rem;
+        }
+
+        .highlight-box {
+            background: #E9F3FF;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #19569A;
+            margin: 1rem 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: #19569A;
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(25, 86, 154, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #19569A;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            background: #19569A;
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Aspekta', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: white;
+            color: #19569A;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+
+        .apply-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            background: #f8f9fa;
+        }
+
+        .download-section {
+            background: #E9F3FF;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: #19569A;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(25, 86, 154, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(25, 86, 154, 0.4);
+            background: #144a8c;
+        }
+
+        .culture-highlight {
+            background: #E9F3FF;
+            border: 1px solid #19569A;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .location-salary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card {
+            background: #E9F3FF;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-card h4 {
+            font-family: 'Aspekta', sans-serif;
+            color: #333F3D;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Site Navigation Header */
+        .site-header {
+            background-color: #fff9ec;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+        }
+
+        .header-container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 0.9375rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333F3D;
+            text-decoration: none;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            list-style-type: none;
+            display: flex;
+            gap: 1.875rem;
+            margin-top: 0;
+        }
+
+        .main-nav a {
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: #333F3D;
+            font-weight: 500;
+        }
+
+        .main-nav a:hover {
+            color: #19569A;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0.9375rem 0;
+            }
+            
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            .main-nav ul {
+                gap: 1.25rem;
+            }
+
+            .container {
+                margin: 1rem;
+                border-radius: 8px;
+            }
+            
+            .header {
+                padding: 2rem 1rem;
+            }
+            
+            .company-name {
+                font-size: 2rem;
+            }
+            
+            .job-title {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 2rem 1rem;
+            }
+            
+            .location-salary {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">The Professeer</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#hero">HOME</a></li>
+                    <li><a href="index.html#features">ABOUT</a></li>
+                    <li><a href="index.html#team">TEAM</a></li>
+                    <li><a href="litanalytics_job_ad.html">CAREERS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1 class="company-name">The Professeer</h1>
+                <h2 class="job-title">Software Development Engineer 1 - Full Stack</h2>
+                <p class="tagline">Build the future of legal analytics - where technology meets justice</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h3 class="section-title">About The Professeer</h3>
+                <p>The Professeer helps litigants and lawyers with relevant analytics that matter to their case. Our engine provides data-driven insights to estimate case lifecycles, costs, lawyer success rate and case winning probability.</p>
+                
+                <div class="culture-highlight">
+                    <strong>Research-Rich Environment:</strong> You will be working in a research-rich environment with an interdisciplinary team of lawyers, statisticians and economists. The company was conceived and incubated as part of a research group, and continues to share physical space and resources with <a href="https://xkdr.org/" style="color: #19569A; font-weight: 600;">XKDR Forum</a>.
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="section-title">The Role</h3>
+                <p>We're looking for a <strong>full stack developer who will drive</strong> the development and engineering work. As a position in an early-stage startup, you'll shape the technical direction of our platform.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>As an SDE1, you will be expected to:</strong></p>
+                    <ul style="margin-left: 1.5rem; color: #364341;">
+                        <li>Design and develop RESTful APIs using FastAPI for our analytics engine</li>
+                        <li>Build responsive, modern frontend interfaces using React and TypeScript</li>
+                        <li>Design and maintain database schemas in PostgreSQL, vector databases, and NoSQL systems</li>
+                        <li>Implement and optimize knowledge graph structures for case analytics</li>
+                        <li>Deploy and manage cloud infrastructure on GCP and AWS</li>
+                        <li>Work with data science team to integrate Python analytics pipelines into production</li>
+                        <li>Write comprehensive tests and maintain code quality standards</li>
+                        <li>Participate in architectural decisions and technical planning</li>
+                        <li>Troubleshoot and resolve production issues</li>
+                        <li>Work alongside and report to the CTO</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Required Skills & Experience</h3>
+                <p>We look for proficiency or past experience in the following technologies:</p>
+                            <div class="skills-grid">
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">TypeScript</div>
+                    <div class="skill-tag">FastAPI</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">PostgreSQL</div>
+                    <div class="skill-tag">Vector DBs</div>
+                    <div class="skill-tag">NoSQL</div>
+                    <div class="skill-tag">GCP</div>
+                    <div class="skill-tag">AWS</div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>What we're looking for:</strong></p>
+                    <ul style="margin-left: 1.5rem; color: #364341; margin-top: 0.5rem;">
+                        <li><strong>Experience:</strong> 1-2 years of relevant full-stack development experience</li>
+                        <li><strong>Technical Skills:</strong> Strong understanding of RESTful APIs, database design, and modern frontend frameworks</li>
+                        <li><strong>Problem Solving:</strong> Ability to debug complex issues, optimize performance, and write clean, maintainable code</li>
+                        
+                        <li><strong>Mindset:</strong> You're expected to be a self-starter who can work with minimal direction</li>
+                        <li><strong>Ownership:</strong> You don't just code - you think like an owner and take end-to-end responsibility</li>
+                        <li><strong>Communication:</strong> Ability to articulate technical concepts to non-technical stakeholders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Location & Compensation</h3>
+                <div class="location-salary">
+                    <div class="info-card">
+                        <h4>📍 Location</h4>
+                        <p><strong>Mumbai</strong><br>In person most weekdays</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>💰 Salary Range</h4>
+                        <p><strong>₹9L per year</strong>
+                            <br>
+                            ESOPS
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Our Recruitment Process</h3>
+                <p>We believe in a thorough yet efficient hiring process. The entire process takes roughly <strong>1-2 weeks</strong> to complete before we roll out an offer.</p>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h4 style="font-family: 'Aspekta', sans-serif; color: #333F3D; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500;">Step 1: Email Screening</h4>
+                    <p style="color: #364341; margin-bottom: 0;">Mail us your resume at <a href="mailto:info@theprofesseer.com" style="color: #19569A; font-weight: 600;">info@theprofesseer.com</a> and include a GitHub link showcasing your previous work. We're interested in seeing real code you've written and projects you've built.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4 style="font-family: 'Aspekta', sans-serif; color: #333F3D; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500;">Step 2: Take-Home Assignment</h4>
+                    <p style="color: #364341;">This assignment is designed to test your comfort across our stack. You will be given <strong>72 hours</strong> to build the assignment on top of our shared data.</p>
+                    <p style="color: #364341; margin-top: 0.8rem; margin-bottom: 0.8rem;"><strong>You can choose between:</strong></p>
+                    <ul style="margin-left: 1.5rem; color: #364341; margin-bottom: 0.8rem;">
+                        <li><strong>Dashboard Prototype:</strong> Build a visual analytics dashboard</li>
+                        <li><strong>Chat with Your Case Application:</strong> Create an interactive Q&A interface</li>
+                        <li><strong>Case Complexity Knowledge Graph:</strong> Design and implement a knowledge graph visualization</li>
+                    </ul>
+                    <p style="color: #364341; margin-bottom: 0;"><em>Note: The assignment must be built using Python and TypeScript only. Detailed requirements will be shared upon selection.</em></p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4 style="font-family: 'Aspekta', sans-serif; color: #333F3D; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500;">Step 3: Technical Interview</h4>
+                    <p style="color: #364341; margin-bottom: 0;">A deep dive into your technical skills, problem-solving approach, and the assignment you submitted. We'll discuss your code, architectural decisions, and explore how you handle real-world engineering challenges.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4 style="font-family: 'Aspekta', sans-serif; color: #333F3D; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500;">Step 4: Founder Interview</h4>
+                    <p style="color: #364341; margin-bottom: 0;">A conversation with the founders to discuss your career goals, understand our vision, and ensure mutual fit. This is as much for you to evaluate us as it is for us to get to know you.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Why Join The Professeer</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">🧠</span>
+                        <div class="stat-label">Interdisciplinary Team</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">📊</span>
+                        <div class="stat-label">Data-Driven Innovation</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">🚀</span>
+                        <div class="stat-label">Leadership Opportunity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3 class="cta-title">Ready to Lead Legal Innovation?</h3>
+            <p>Join our mission to transform the legal industry with data-driven insights</p>
+            <a href="mailto:info@theprofesseer.com" class="apply-button">Apply Now</a>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">Contact & Learn More</h4>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.2rem;">📧</span>
+                        <a href="mailto:info@theprofesseer.com" style="color: white; text-decoration: underline; font-weight: 500;">info@theprofesseer.com</a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.2rem;">🌐</span>
+                        <a href="https://theprofesseer.com/" target="_blank" style="color: white; text-decoration: underline; font-weight: 500;">theprofesseer.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h4 style="font-family: 'Aspekta', sans-serif; color: #333F3D; margin-bottom: 1rem; font-weight: 500;">Download Job Advertisement</h4>
+            <p style="color: #364341; margin-bottom: 1rem;">Save this job posting for your records</p>
+            <div class="download-buttons">
+                <button onclick="downloadHTML()" class="download-btn">📄 Download HTML</button>
+                <button onclick="downloadPDF()" class="download-btn">📑 Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadHTML() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'TheProfesseer-Engineering-SDE1-Job-Ad.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadPDF() {
+            // Hide download section temporarily for cleaner PDF
+            const downloadSection = document.querySelector('.download-section');
+            downloadSection.style.display = 'none';
+            
+            window.print();
+            
+            // Restore download section
+            setTimeout(() => {
+                downloadSection.style.display = 'block';
+            }, 1000);
+        }
+
+        // Add print styles
+        const printStyles = `
+            @media print {
+                body { 
+                    background: white !important; 
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                .container { 
+                    box-shadow: none !important;
+                    margin: 0 !important;
+                    border-radius: 0 !important;
+                }
+                .download-section {
+                    display: none !important;
+                }
+                .header, .cta-section {
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                .apply-button {
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                a {
+                    color: #19569A !important;
+                    text-decoration: underline;
+                }
+            }
+        `;
+        
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = printStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</html>
