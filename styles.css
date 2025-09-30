@@ -524,11 +524,12 @@ h2 .underline {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--card-gap);
   text-align: center;
-  justify-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .team-member {
@@ -730,7 +731,7 @@ h2 .underline {
   }
 
   .team-grid {
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     gap: var(--card-gap);
   }
   .team-member {
@@ -835,7 +836,7 @@ h2 .underline {
   }
 
   .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     gap: var(--card-gap);
   }
   .team-member img {
@@ -961,7 +962,7 @@ h2 .underline {
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
+    justify-content: center;
     gap: 1.875rem;
   }
   .team-member {
