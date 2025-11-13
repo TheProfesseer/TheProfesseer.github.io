@@ -439,6 +439,7 @@ h2 .underline {
   background-color: var(--bg-light-blue);
   padding: 1.875rem;
   border-radius: 0.75rem;
+  border: 3px dotted var(--accent-color);
   display: flex;
   flex-direction: column;
 }
